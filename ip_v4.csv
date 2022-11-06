@@ -1,10 +1,5 @@
-IPV4,STREAM
-1234,data_science
-2345,networking
-3456,data_science
-4567,data_science
-6789,networking
-7891,data_science
-8912,networking
-9123,data_science
-1235,data_science
+IPV4,STREAM,USERNAME,PASSWORD
+3.21.128.222,data_science,ubuntu,redhat
+18.191.213.136,networking,ubuntu,redhat
+3.138.190.76,data_science,ubuntu,redhat
+

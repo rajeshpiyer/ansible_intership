@@ -1,14 +1,8 @@
 [data_science]
-1234
-3456
-4567
-7891
-9123
-1235
+3.21.128.222 ansible_user=ubuntu ansible_ssh_pass=redhat
+3.138.190.76 ansible_user=ubuntu ansible_ssh_pass=redhat
 [networking]
-2345
-6789
-8912
+18.191.213.136 ansible_user=ubuntu ansible_ssh_pass=redhat
 [mca:children]
 data_science
 networking

@@ -1,0 +1,21 @@
+- name: Facts checking
+  hosts: mca
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: hostname
+      copy:
+        content: "{{ansible_facts.hostname }}"
+        dest: /root/result1.txt
+    - name: ipv4
+      copy:
+        content: "{{ansible_facts.default_ipv4.address }}"
+        dest: /root/result2.txt
+    - name: memory
+      copy:
+        content: "{{ansible_facts.devices.xvda.size }}"
+        dest: /root/result3.txt
+    - name: bios version
+      copy:
+        content: "{{ansible_facts.bios_version }}"
+        dest: /root/result4.txt

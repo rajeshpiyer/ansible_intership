@@ -1,6 +1,6 @@
 - name: Security Updates
   hosts: mca
-  remote_user: ec2-user
+  remote_user: ubuntu
   become: true
   tasks:
    - name: Security Updates
@@ -11,4 +11,4 @@
       hour: 0
       day: 1
       month: "*"
-      job: 'yum update'
+      job: 'apt-get update'

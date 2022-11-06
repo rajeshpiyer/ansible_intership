@@ -1,15 +1,19 @@
 - name: Install Packages
   hosts: networking
-  remote_user: ec2-user
+  remote_user: ubuntu
   become: yes
   tasks:
     - name: Install Apache
-      yum:
-        name: httpd
+      apt:
+        name: apache2
         state: latest
+    - name: "Update Repository cache"
+      apt:
+        update_cache: true
+        force_apt_get: true
 
     - name: Install Docker
-      yum:
-        name: docker
+      apt:
+        name: docker.io
         state: latest
 
