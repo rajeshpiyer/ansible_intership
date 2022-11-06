@@ -1,0 +1,15 @@
+- name: Install Packages
+  hosts: networking
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Install Docker
+      yum:
+        name: docker
+        state: latest
+

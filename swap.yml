@@ -1,0 +1,9 @@
+- name: play for swap
+  hosts: mca
+  remote_user: ec2-user
+  become: true
+  tasks:
+    - name: configure swap
+      shell: " parted -s /dev/xvdb mkpart primary 1003MiB 1515MiB &&  mkswap /dev/xvdb3 && echo '/dev/xvdb3                            swap     swap     defaults           0      0 '>> /etc/fstab && mount -a  && swapon -a "
+
+

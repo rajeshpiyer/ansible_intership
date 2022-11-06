@@ -1,0 +1,14 @@
+- name: Security Updates
+  hosts: mca
+  remote_user: ec2-user
+  become: true
+  tasks:
+   - name: Security Updates
+     ansible.builtin.cron:
+      name: security updates
+      state: present
+      minute: 0
+      hour: 0
+      day: 1
+      month: "*"
+      job: 'yum update'
