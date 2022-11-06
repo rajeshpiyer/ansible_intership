@@ -1,4 +1,4 @@
 ansible
 docker
 pandas
-openpyxl
+xlrd

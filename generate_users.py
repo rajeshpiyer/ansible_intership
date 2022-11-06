@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # %%
-dataset = pd.read_excel("user_passwords.xlsx")
+dataset = pd.read_csv("user_passwords.csv")
 
 
 # %%
