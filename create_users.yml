@@ -1,0 +1,11 @@
+- name: create users
+  hosts: all
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name: Load passwords from vault
+      include_vars: user_passwords.yml
+
+    - name: Create users
+      user: name="{{item.key}}" password="{{item.value}}" shell="/bin/bash" update_password=on_create
+      with_dict: "{{ user_passwords }}"

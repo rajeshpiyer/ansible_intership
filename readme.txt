@@ -1,0 +1,4 @@
+ansible
+docker
+pandas
+openpyxl
